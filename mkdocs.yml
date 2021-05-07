@@ -45,3 +45,16 @@ plugins:
 
 nav:
   - 'Index': index.md
+  - 'Library':
+    - 'Cogs': library/cogs.md
+    - 'Config': library/config.md
+    - 'Database': library/database.md
+    - 'Emojis': library/emojis.md
+    - 'Environment Variables': library/environment.md
+    - 'Logger': library/logger.md
+    - 'Material Colors': library/material_colors.md
+    - 'Permissions': library/permissions.md
+    - 'PubSub': library/pubsub.md
+    - 'Settings': library/settings.md
+    - 'Translations': library/translations.md
+    - 'Util Functions': library/util.md

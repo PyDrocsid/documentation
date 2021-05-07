@@ -1,0 +1,47 @@
+site_name: PyDrocsid Documentation
+site_url: https://pydrocsid.github.io/documentation/
+repo_name: PyDrocsid/documentation
+repo_url: https://github.com/PyDrocsid/documentation/
+site_description: "Documentation for the PyDrocsid Framework"
+site_author: https://github.com/PyDrocsid
+remote_branch: gh-pages
+edit_uri: edit/develop/docs
+
+theme:
+  name: 'material'
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  language: en
+  direction: ltr
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.expand
+    - navigation.instant
+    - navigation.sections
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.tabbed
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - git-revision-date
+  - git-revision-date-localized
+  - search:
+      lang: en
+
+nav:
+  - 'Index': index.md

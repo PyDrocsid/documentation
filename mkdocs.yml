@@ -45,6 +45,7 @@ plugins:
 
 nav:
   - 'Index': index.md
+
   - 'Library':
     - 'Cogs': library/cogs.md
     - 'Config': library/config.md
@@ -58,3 +59,50 @@ nav:
     - 'Settings': library/settings.md
     - 'Translations': library/translations.md
     - 'Util Functions': library/util.md
+
+  - 'Cogs':
+
+    - 'Administration':
+      - 'Permissions': cogs/administration/permissions.md
+      - 'Roles': cogs/administration/roles.md
+      - 'Settings': cogs/administration/settings.md
+      - 'Sudo': cogs/administration/sudo.md
+
+    - 'Moderation':
+      - 'AutoMod': cogs/moderation/automod.md
+      - 'AutoRole': cogs/moderation/autorole.md
+      - 'Invite Whitelist': cogs/moderation/invites.md
+      - 'Logging': cogs/moderation/logging.md
+      - 'MediaOnly': cogs/moderation/mediaonly.md
+      - 'Message Commands': cogs/moderation/message.md
+      - 'Mod Tools': cogs/moderation/mod.md
+      - 'Role Notifications': cogs/moderation/role_notifications.md
+      - 'Spam Detection': cogs/moderation/spam_detection.md
+      - 'Verification': cogs/moderation/verification.md
+
+    - 'Information':
+      - 'Bot Info': cogs/information/bot_info.md
+      - 'Code Blocks': cogs/information/codeblocks.md
+      - 'Heartbeat': cogs/information/heartbeat.md
+      - 'Help': cogs/information/help.md
+      - 'Inactivity': cogs/information/inactivity.md
+      - 'Metaquestion': cogs/information/metaquestion.md
+      - 'Server Info': cogs/information/server_info.md
+      - 'User Info': cogs/information/user_info.md
+
+    - 'Integrations':
+      - 'Advent of Code': cogs/integrations/adventofcode.md
+      - 'CleverBot': cogs/integrations/cleverbot.md
+      - 'Discord.py Documentation': cogs/integrations/discordpy_documentation.md
+      - 'Reddit': cogs/integrations/reddit.md
+      - 'Run Code': cogs/integrations/run_code.md
+
+    - 'General':
+      - 'BeTheProfessional': cogs/general/betheprofessional.md
+      - 'News': cogs/general/news.md
+      - 'Polls': cogs/general/polls.md
+      - 'ReactionPin': cogs/general/reactionpin.md
+      - 'ReactionRole': cogs/general/reactionrole.md
+      - 'Utils': cogs/general/utils.md
+      - 'Voice Channels': cogs/general/voice_channel.md
+

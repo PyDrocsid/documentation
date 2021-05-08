@@ -1,107 +1,114 @@
 # Message Commands
 
-This cog contains some functions to send messages as bot.
+This cog contains commands to send and manage messages as the bot.
 
 ## `send`
-The `.send` command is the main function to send messages. There are three different subcommands.
+The `.send` command can be used to send messages as the bot. There are three different subcommands.
 
-# copy
-You can copy message content and send the message to a different channel by using:
-
-```css
-.send [copy|c] <channel> <message>
-```
-example:
-`.send copy #general https://discord.com/channels/637234990404599809/637236069062148106/824732106599956521`
-
-# text
-You can send normal text-messages in a channel by using:
+### `text`
+You can send normal text messages in a channel by using:
 
 ```css
 .send [text|t] <channel>
 ```
-example:
-`.send text #general`
 
-After entering the command, the bot expects you to enter the text. If you have changed your mind, you can abort the process by entering `CANCEL`.
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`channel`|:heavy_check_mark:|The channel into which you want to send the message|
 
-# embed
-You can send embeded messages in a channel by using:
+After entering the command, the bot expects you to enter the text you want to send. If you have changed your mind, you can abort the process by entering `CANCEL`.
 
-(The color is optional)
+### `embed`
+You can send embed messages in a channel by using:
+
 ```css
 .send [embed|e] <channel> [color]
 ```
-example:
-`.send embed #general #339204`
 
-After entering the command, the bot expects you to enter the title. The title can be between 1-256 
-characters long. (Note that pings and channel-mentions dont work in titels)
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`channel`|:heavy_check_mark:|The channel into which you want to send the message|
+|`color`||The color of the embed (name or hex code)|
 
-After entering the title, the bot asks for the content of the message.
+After entering the command, the bot expects you to enter the embed title. 
 
-If you have changed your mind, you can abort the process by entering `CANCEL`.
+!!! note
+    - The title cannot contain more than 256 characters.
+    - You cannot use user/role/channel mentions in embed titles
 
-## `edit`
-Use the `.edit` command to edit messages send by the bot.
+After entering the title, the bot asks for the description of the embed.
 
-# copy
-You can copy the content of a message and put it in another message from the bot by using:
+If at any point you have changed your mind, you can abort the process by entering `CANCEL`.
+
+### `copy`
+You can copy the content, embeds and files of any message into a new message by using:
 
 ```css
-.edit [copy|c] <message> <source>
+.send [copy|c] <channel> <message>
 ```
 
-example:
-`.edit copy https://discord.com/channels/637234990404599809/754443886843396226/840693698780987432 https://discord.com/channels/637234990404599809/754443886843396226/840693822529863690`
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`channel`|:heavy_check_mark:|The channel into which you want to send the new message|
+|`message`|:heavy_check_mark:|The message you want to copy (specify the message link)|
 
-(The source has to be a message from the bot)
+## `edit`
+The `.edit` command can be used to edit messages sent by the bot.
 
-# text
-Use this command to edit normal text-messages send from the bot by using:
+### `text`
+You can edit normal text messages sent by the bot by using:
 
 ```css
 .edit [text|t] <message>
 ```
 
-example:
-`.edit text https://discord.com/channels/637234990404599809/754443886843396226/840697294864252968`
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`message`|:heavy_check_mark:|The message you want to edit (specify the message link)|
 
-After entering the command, the bot expects you to enter the text. If you have changed your mind, you can abort the process by entering "CANCEL".
+After entering the command, the bot expects you to enter the new text. If you have changed your mind, you can abort the process by entering `CANCEL`.
 
-# embed
-Use this command to edit embeded messages send from the bot by using:
+### `embed`
+Use this command to edit embed messages sent by the bot by using:
 
 ```css
 .edit [embed|e] <message> [color]
 ```
 
-example:
-`.edit embed #general #339204`
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`message`|:heavy_check_mark:|The message you want to edit (specify the message link)|
+|`color`||The new color of the embed (name or hex code)|
 
-After entering the command, the bot expects you to enter the new title. The title can be between 1-256 
-characters long. (Note that pings and channel-mentions dont work in titels)
+After entering the command, the bot expects you to enter the new title.
 
-After entering the new title, the bot asks for the new content of the message.
+!!! note
+    - The title cannot contain more than 256 characters.
+    - You cannot use user/role/channel mentions in embed titles
 
-If you have changed your mind, you can abort the process by entering "CANCEL".
+After entering the new title, the bot asks for the new description of the embed.
+
+If at any point you have changed your mind, you can abort the process by entering `CANCEL`.
+
+### `copy`
+You can copy the content, embeds and files of any message into another message already sent by the bot by using:
+
+```css
+.edit [copy|c] <message> <source>
+```
+
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`message`|:heavy_check_mark:|The message you want to edit (specify the message link)|
+|`source`|:heavy_check_mark:|The message you want to copy from (specify the message link)|
 
 ## `delete`
-Use this command to delete a message send by the bot.
+Use this command to delete any message:
 
 ```css
 .delete <message>
 ```
 
-example:
-`.delete https://discord.com/channels/637234990404599809/754443886843396226/840698580305182720`
-
-
-
-
-
-
-
-```
-Documentation created by Infinity aka NekoFanatic. Please note that I am not responsible for any grammar or spelling errors. If you still find some, you're welcome to keep them ^^
-```
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`message`|:heavy_check_mark:|The message you want to delete (specify the message link)|

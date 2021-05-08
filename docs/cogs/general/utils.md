@@ -17,3 +17,7 @@ Usage:
 ```.css
 .[snowflake|sf|time] <ID>
 ```
+
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`ID`|:heavy_check_mark:|The snowflake ID|

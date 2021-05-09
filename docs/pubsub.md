@@ -1,5 +1,7 @@
 # PubSub Channels
 
+This is a list of all global PubSub channels. For a more detailed explanation on how these PubSub channels work, please refer to the [PubSub documentation](/library/pubsub).
+
 ## `send_to_changelog`
 Use this PubSub channel to send a message to a server's changelog channel.
 

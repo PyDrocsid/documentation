@@ -59,7 +59,7 @@ Subscriptions:
 
 
 ## `get_user_info_entries`
-Use this PubSub channel to get/provide information about a user for the user info command.
+Use this PubSub channel to get/provide information about a user for the user info command (e.g. statistics for mutes and bans).
 
 ```python
 async def get_user_info_entries(user_id: int) -> list[list[tuple[str, str]]]
@@ -77,7 +77,7 @@ Subscriptions:
 
 
 ## `get_user_status_entries`
-Use this PubSub channel to get/provide status information about a user for the user info command.
+Use this PubSub channel to get/provide status information about a user for the user info command (e.g. current membership status or inactivity information).
 
 ```python
 async def get_user_status_entries(user_id: int) -> list[list[tuple[str, str]]]

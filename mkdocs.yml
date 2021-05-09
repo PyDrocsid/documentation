@@ -109,3 +109,5 @@ nav:
       - 'Utils': cogs/general/utils.md
       - 'Voice Channels': cogs/general/voice_channel.md
 
+  - 'PubSub Channels': pubsub.md
+

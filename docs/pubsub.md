@@ -1,0 +1,167 @@
+# PubSub Channels
+
+## `send_to_changelog`
+Use this PubSub channel to send a message into the changelog channel of a server.
+
+```python
+async def send_to_changelog(guild: Guild, message: Union[str, Embed]) -> []
+```
+
+Arguments:
+
+- `guild`: The server to which the changelog entry should be sent
+- `message`: The changelog entry (text or embed)
+
+Returns: `None`
+
+Subscriptions:
+
+- [Logging](/cogs/moderation/logging)
+
+
+## `send_alert`
+Use this PubSub channel to send a message into the internal alert channel of a server.
+
+```python
+async def send_alert(guild: Guild, message: Union[str, Embed]) -> []
+```
+
+Arguments:
+
+- `guild`: The server to which the message should be sent
+- `message`: The message itself (text or embed)
+
+Returns: `None`
+
+Subscriptions:
+
+- [Logging](/cogs/moderation/logging)
+
+
+## `log_auto_kick`
+Use this PubSub channel to log an automatic member kick.
+
+```python
+async def log_auto_kick(member: Member) -> []
+```
+
+Arguments:
+
+- `member`: The member that was kicked
+
+Returns: `None`
+
+Subscriptions:
+
+- [Mod Tools](/cogs/moderation/mod)
+
+
+## `get_user_info_entries`
+Use this PubSub channel to get/provide information about a user for the user info command.
+
+```python
+async def get_user_info_entries(user_id: int) -> list[list[tuple[str, str]]]
+```
+
+Arguments:
+
+- `user_id`: The user id
+
+Returns: A list of `(name, value)` tuples
+
+Subscriptions:
+
+- [Mod Tools](/cogs/moderation/mod)
+
+
+## `get_user_status_entries`
+Use this PubSub channel to get/provide status information about a user for the user info command.
+
+```python
+async def get_user_status_entries(user_id: int) -> list[list[tuple[str, str]]]
+```
+
+Arguments:
+
+- `user_id`: The user id
+
+Returns: A list of `(name, value)` tuples
+
+Subscriptions:
+
+- [Inactivity](/cogs/information/inactivity)
+- [Mod Tools](/cogs/moderation/mod)
+
+
+## `get_userlog_entries`
+Use this PubSub channel to get/provide log entries about a user for the user log command.
+
+```python
+async def get_userlog_entries(user_id: int) -> list[list[tuple[datetime, str]]]
+```
+
+Arguments:
+
+- `user_id`: The user id
+
+Returns: A list of `(datetime, log_entry)` tuples
+
+Subscriptions:
+
+- [Invite Whitelist](/cogs/moderation/invites)
+- [Mod Tools](/cogs/moderation/mod)
+
+
+## `revoke_verification`
+Use this PubSub channel to revoke verification of a member.
+
+```python
+async def revoke_verification(member: Member) -> []
+```
+
+Arguments:
+
+- `member`: The member
+
+Returns: `None`
+
+Subscriptions:
+
+- [User Info](/cogs/information/user_info)
+
+
+## `can_respond_on_reaction`
+Use this PubSub channel to find out whether a cog is allowed to send a message into a channel in response to a reaction.
+
+```python
+async def can_respond_on_reaction(channel: TextChannel) -> list[bool]
+```
+
+Arguments:
+
+- `channel`: The text channel
+
+Returns: `True` if it is ok to send a message into this channel, otherwise `False`
+
+Subscriptions:
+
+- [Logging](/cogs/moderation/logging)
+- [MediaOnly](/cogs/moderation/mediaonly)
+
+
+## `ignore_message_edit`
+Use this PubSub channel to prevent the next edit event of a message from being logged.
+
+```python
+async def ignore_message_edit(message: Message) -> []
+```
+
+Arguments:
+
+- `message`: The message
+
+Returns: `None`
+
+Subscriptions:
+
+- [Logging](/cogs/moderation/logging)

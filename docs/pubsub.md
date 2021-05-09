@@ -1,7 +1,7 @@
 # PubSub Channels
 
 ## `send_to_changelog`
-Use this PubSub channel to send a message into the changelog channel of a server.
+Use this PubSub channel to send a message to a server's changelog channel.
 
 ```python
 async def send_to_changelog(guild: Guild, message: Union[str, Embed]) -> []
@@ -9,7 +9,7 @@ async def send_to_changelog(guild: Guild, message: Union[str, Embed]) -> []
 
 Arguments:
 
-- `guild`: The server to which the changelog entry should be sent
+- `guild`: The server the changelog entry should be sent to
 - `message`: The changelog entry (text or embed)
 
 Returns: `None`
@@ -20,7 +20,7 @@ Subscriptions:
 
 
 ## `send_alert`
-Use this PubSub channel to send a message into the internal alert channel of a server.
+Use this PubSub channel to send a message to a server's internal alert channel.
 
 ```python
 async def send_alert(guild: Guild, message: Union[str, Embed]) -> []
@@ -28,8 +28,8 @@ async def send_alert(guild: Guild, message: Union[str, Embed]) -> []
 
 Arguments:
 
-- `guild`: The server to which the message should be sent
-- `message`: The message itself (text or embed)
+- `guild`: The server the message should be sent to
+- `message`: The message to be sent (text or embed)
 
 Returns: `None`
 
@@ -113,7 +113,7 @@ Subscriptions:
 
 
 ## `revoke_verification`
-Use this PubSub channel to revoke verification of a member.
+Use this PubSub channel to revoke a member's verification.
 
 ```python
 async def revoke_verification(member: Member) -> []
@@ -141,7 +141,7 @@ Arguments:
 
 - `channel`: The text channel
 
-Returns: `True` if it is ok to send a message into this channel, otherwise `False`
+Returns: `True` if it is ok to send a message into this channel, `False` otherwise
 
 Subscriptions:
 

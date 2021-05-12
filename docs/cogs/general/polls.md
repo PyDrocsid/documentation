@@ -13,6 +13,7 @@ The `.yesno` command puts :thumbsup: :thumbsdown: as reactions under the message
 ```css
 .[yesno|yn] [content]
 ```
+If u put a message link behind the command (on the position of the content) the bot puts the reactions on the message from which the link originates
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|

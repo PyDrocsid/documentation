@@ -1,6 +1,6 @@
 # BeTheProfessional
 
-This cog contains a system for self-assignable roles (further referred to as `topics`)
+This cog contains a system for self-assignable roles (further referred to as `topics`).
 
 ## `list_topics`
 The `.?` command lists all available topics.
@@ -30,10 +30,13 @@ The `.-` command unassigns the user the specified topics.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A topic. Multible topics can be removed by separating them using `,` or `;`. All topics can be removed with `.- *`|
+|`topic`|:heavy_check_mark:|A topic. Multible topics can be removed by separating them using `,` or `;`.|
+
+!!! note
+    You can use `.- *` to remove all topics at once.
 
 
-## `new_topic`
+## `register_topics`
 The `.*` command adds new topics to the list of available topics.
 
 ```css

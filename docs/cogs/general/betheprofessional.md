@@ -1,16 +1,16 @@
 # BeTheProfessional
 
-This cog contains a system with which you can give yourself roles
+This cog contains a system for self-assignable roles (further referred to as `topics`)
 
-## `role_list`
-The `.?` shows all roles which can be added to a user.
+## `list_topics`
+The `.?` command lists all available topics.
 
 ```css
 .?
 ```
 
-## `add`
-The `.+` command gives your self roles from the list
+## `assign_topics`
+The `.+` command assigns the user the specified topics.
 
 ```css
 .+ <topic>
@@ -18,11 +18,11 @@ The `.+` command gives your self roles from the list
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A role from the list. Multible topics can be added by using a `,` between them|
+|`topic`|:heavy_check_mark:|A topic. Multible topics can be added by separating them using `,` or `;`|
 
 
-## `remove`
-The `.-` command removes a selfrole from your profile.
+## `unassign_topics`
+The `.-` command unassigns the user the specified topics.
 
 ```css
 .- <topic>
@@ -30,11 +30,11 @@ The `.-` command removes a selfrole from your profile.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A role from the list. Multible topics can be removed by using a `,` between them. All roles kan be removed by using `.- *`|
+|`topic`|:heavy_check_mark:|A topic. Multible topics can be removed by separating them using `,` or `;`. All topics can be removed with `.- *`|
 
 
 ## `new_topic`
-The `.*` command adds a new role to the list.
+The `.*` command adds new topics to the list of available topics.
 
 ```css
 .* <topic>
@@ -42,10 +42,10 @@ The `.*` command adds a new role to the list.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A new role (If the role not exist, the role is created). Multible topics can be registered by using a `,` between them.|
+|`topic`|:heavy_check_mark:|The new topic's name. If no role with this name (case insensitive) exists, one is created. Multible topics can be registered by separating them using `,` or `;`.|
 
-## `delte_topic`
-The `./` command removes (a) role(s) from the list and deletes the role(s).
+## `delete_topics`
+The `./` command removes topics from the list of available topics and deletes the associated roles.
 
 ```css
 ./ <topic>
@@ -53,11 +53,11 @@ The `./` command removes (a) role(s) from the list and deletes the role(s).
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A topic from the list. Multible roles can be deleted by using a `,` between them.|
+|`topic`|:heavy_check_mark:|A topic. Multible topics can be deleted by separating them using `,` or `;`.|
 
 
-## `disable_topic`
-The `.%` command unregisters one or more topics without deleting the roles.
+## `unregister_topics`
+The `.%` command unregisters topics without deleting the associated roles.
 
 ```css
 .% <topic>
@@ -65,4 +65,4 @@ The `.%` command unregisters one or more topics without deleting the roles.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`topic`|:heavy_check_mark:|A topic from the list. Multible topics can be removed from the list by using a `,` between them.|
+|`topic`|:heavy_check_mark:|A topic. Multible topics can be unregistered by separating them using `,` or `;`.|

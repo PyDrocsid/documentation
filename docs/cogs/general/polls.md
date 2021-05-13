@@ -13,7 +13,7 @@ The `.yesno` command creates a "yes/no" poll by putting :thumbsup: and :thumbsdo
 |:------:|:------:|:----------|
 |`content`|       |The message content / A message link|
 
-If `content` is a message link the bot puts the reactions on the message this link refers to.
+If `content` is a message link, the bot puts the reactions on the message this link refers to.
 
 ## `poll`
 The `.poll` command creates a poll with 1 to a maximum of 19 options.

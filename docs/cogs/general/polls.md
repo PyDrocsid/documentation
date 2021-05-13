@@ -1,54 +1,54 @@
 # Polls
 
-This cog contains the poll commands.
+This cog provides commands for simple "yes/no" polls, multiple choice polls and team polls.
 
-```
-<> - required
-[] - optional
-```
-
-## `yes/no`
-The `.yesno` command puts :thumbsup: :thumbsdown: as reactions under the message (pictures work, too).
+## `yesno`
+The `.yesno` command creates a "yes/no" poll by putting :thumbsup: and :thumbsdown: as reactions under the message (pictures and other files work, too).
 
 ```css
 .[yesno|yn] [content]
 ```
-If `content` is a message link the bot puts the reactions on the message the link refers to.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`content`|       |The message content/A message link|
+|`content`|       |The message content / A message link|
 
-
+If `content` is a message link the bot puts the reactions on the message this link refers to.
 
 ## `poll`
-The `.poll` command makes a poll with 1-19 options.
+The `.poll` command creates a poll with 1 to a maximum of 19 options.
 
 ```css
 .[poll|vote] <question>
 [emoji1] <option1>
 [emojiX] [optionX]
 ```
+
 |Argument|Required|Description|
 |:------:|:------:|:----------|
 |`question`|:heavy_check_mark:|The poll topic/question|
 |`emojiX`|       |The reaction emote for option X|
-|`option1`|:heavy_check_mark:|The poll content for this reaction|
-|`optionX`|       |Poll option X|
+|`option1`|:heavy_check_mark:|The first poll option|
+|`optionX`|       |The Xth poll option|
 
+!!! note
+    Multiline titles and options can be specified using a \ at the end of a line
 
 ## `teampoll`
-The `.teampoll` command starts a poll and shows, which teamler has not voted yet.
+The `.teampoll` command creates a poll with 1 to a maximum of 20 options and shows which team members have not voted yet.
 
 ```css
 .[teampoll|teamvote|tp] <question>
 [emoji1] <option1>
 [emojiX] [optionX]
 ```
+
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`team-role`|:heavy_check_mark:|Team-role from the staff|
 |`question`|:heavy_check_mark:|The poll topic/question|
 |`emojiX`|       |The reaction emote for option X|
-|`option1`|:heavy_check_mark:|The poll content for this reaction|
-|`optionX`|       |The poll option for this reaction|
+|`option1`|:heavy_check_mark:|The first poll option|
+|`optionX`|       |The Xth poll option|
+
+!!! note
+    Multiline titles and options can be specified using a \ at the end of a line

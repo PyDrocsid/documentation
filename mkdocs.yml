@@ -85,11 +85,9 @@ nav:
 
     - 'Information':
       - 'Bot Info': cogs/information/bot_info.md
-      - 'Code Blocks': cogs/information/codeblocks.md
       - 'Heartbeat': cogs/information/heartbeat.md
       - 'Help': cogs/information/help.md
       - 'Inactivity': cogs/information/inactivity.md
-      - 'Metaquestion': cogs/information/metaquestion.md
       - 'Server Info': cogs/information/server_info.md
       - 'User Info': cogs/information/user_info.md
 
@@ -102,6 +100,7 @@ nav:
 
     - 'General':
       - 'BeTheProfessional': cogs/general/betheprofessional.md
+      - 'Custom Commands': cogs/general/custom_commands.md
       - 'News': cogs/general/news.md
       - 'Polls': cogs/general/polls.md
       - 'ReactionPin': cogs/general/reactionpin.md

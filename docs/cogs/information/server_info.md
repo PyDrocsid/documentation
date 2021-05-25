@@ -3,17 +3,17 @@
 This cog contains some commands to show information about the guild and its bots.
 
 ## `server`
-The `.server` command shows information about the server the command is executed on.
+The `.server` command shows information about the server the command is executed in.
 
 ```css
 .server
 ```
 
-The server information given by this command includes:
+The server information given by this command include:
 
 - Server name and icon
-- Creation Date
-- Member Count (total and online counts)
+- Creation date
+- Member count (total and online counts)
 - Owner
 - Team roles and their members
 - Bot count (total and online counts)
@@ -21,7 +21,7 @@ The server information given by this command includes:
 
 
 ### `bots`
-The `.server bots` command shows a list of all bots on this server and their online status.
+The `.server bots` command shows a list of all bots in this server and their online status.
 
 ```css
 .server bots

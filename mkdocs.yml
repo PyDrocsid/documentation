@@ -81,6 +81,7 @@ nav:
       - 'Mod Tools': cogs/moderation/mod.md
       - 'Role Notifications': cogs/moderation/role_notifications.md
       - 'Spam Detection': cogs/moderation/spam_detection.md
+      - 'User Notes': cogs/moderation/user_notes.md
       - 'Verification': cogs/moderation/verification.md
 
     - 'Information':
@@ -105,6 +106,7 @@ nav:
       - 'Polls': cogs/general/polls.md
       - 'ReactionPin': cogs/general/reactionpin.md
       - 'ReactionRole': cogs/general/reactionrole.md
+      - 'RemindMe': cogs/general/remindme.md
       - 'Utils': cogs/general/utils.md
       - 'Voice Channels': cogs/general/voice_channel.md
 

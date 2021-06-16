@@ -11,7 +11,7 @@ The `.user` command shows general information about a given user.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`user`||The user whose information is requested. If omitted, the requesting user receives their own information via direct messages.|
+|`user`||The user whose information is requested. If omitted, the requesting user receives their own information via as a direct message.|
 
 !!! note
     - Every user is allowed to request their own information.
@@ -58,7 +58,7 @@ The `.ulog` command shows the moderation log of a given user.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`user`||The user whose log is requested. If omitted, the requesting user receives their own log via direct messages.|
+|`user`||The user whose log is requested. If omitted, the requesting user receives their own log as a direct message.|
 
 !!! note
     - Every user is allowed to request their own moderation log.
@@ -71,7 +71,7 @@ The user log given by this command contains the following events:
 - Username and nickname changes
 - Verification state changes
 - Discord invite approvals and removals
-- Moderation actions:
+- Passive moderation actions:
     - Reports
     - Warns
     - Mutes

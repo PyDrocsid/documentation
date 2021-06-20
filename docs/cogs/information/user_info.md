@@ -1,9 +1,9 @@
 # User Info
 
-This cog contains some commands to show information about Discord user accounts.
+This cog contains commands to show information about Discord user accounts.
 
 ## `user`
-The `.user` command shows general information about a given user.
+The `.user` command shows general information about the requested user.
 
 ```css
 .[userinfo|user|uinfo|userstats] [user]
@@ -11,7 +11,7 @@ The `.user` command shows general information about a given user.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`user`||The user whose information is requested. If omitted, the requesting user receives their own information via as a direct message.|
+|`user`||The user whose information is requested. If omitted, the requesting user receives their own information via a direct message.|
 
 !!! note
     - Every user is allowed to request their own information.

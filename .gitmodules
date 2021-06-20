@@ -1,0 +1,4 @@
+[submodule "cogs"]
+    path = cogs
+    url = ../../Pydrocsid/cogs.git
+    branch = develop

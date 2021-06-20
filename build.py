@@ -20,14 +20,14 @@ for item in config["nav"]:
         cog_nav = item["Cogs"]
         break
 else:
-    print("ERROR: Could not find cogs in mkdocs navigation!")
+    print("::error::Could not find cogs in mkdocs navigation!")
     exit(1)
 
 cog_nav.clear()
 
 for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES):
     if not category.is_dir():
-        print(f"WARNING: Could not find category {category.name}")
+        print(f"::warning::Could not find category {category.name}")
         continue
 
     cog_nav.append({category.name.capitalize(): (category_nav := [])})
@@ -38,13 +38,14 @@ for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES)
 
         docs = cog.joinpath("documentation.md")
         if not docs.is_file():
-            print(f"WARNING: Could not find documentation for {category.name}/{cog.name}")
+            print(f"::warning::Could not find documentation for {category.name}/{cog.name}")
             continue
 
         with docs.open() as file:
             name = file.readline().removeprefix("# ").strip()
 
         target = Path(f"cogs/{category.name}/{cog.name}.md")
+        Path("docs").joinpath(target).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(docs, Path("docs").joinpath(target))
         category_nav.append({name: str(target)})
 

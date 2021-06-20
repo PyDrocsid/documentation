@@ -11,7 +11,7 @@ The `.user` command shows general information about the requested user.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|`user`||The user whose information is requested. If omitted, the requesting user receives their own information via a direct message.|
+|`user`||The user whose information is requested. If omitted, the requesting user receives their own information as a direct message.|
 
 !!! note
     - Every user is allowed to request their own information.

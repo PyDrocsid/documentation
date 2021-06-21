@@ -1,6 +1,6 @@
 # MediaOnly
 
-This cog contains the `mediaonly` command which can set up channels, in which only pictures can be send.
+This cog contains the `mediaonly` command which can set up channels, in which only pictures can be sent.
 ```css
 .[mediaonly|mo] <subcommand>
 ```
@@ -11,7 +11,7 @@ This cog contains the `mediaonly` command which can set up channels, in which on
 # Subcommands
 
 ## `add`
-The `add` subcommand sets up a mediaonly atribute to channel.
+The `add` subcommand adds a media-only attribute to the channel.
 
 (`mediaonly.read` and `mediaonly.write` are required permissions)
 
@@ -23,7 +23,7 @@ The `add` subcommand sets up a mediaonly atribute to channel.
 |`channel`|:heavy_check_mark:|The channel|
 
 ## `remove`
-The `remove` subcommand removes the mediaonly atribute channel.
+The `remove` subcommand removes the media-only attribute from the channel.
 
 (`mediaonly.read` and `mediaonly.write` are required permissions)
 
@@ -36,9 +36,9 @@ The `remove` subcommand removes the mediaonly atribute channel.
 
 ## `list`
 
-Shows a list of all channel with the mediaonly atribute.
+Shows a list of all channels with the media-only attribute.
 
-(`mediaonly.read` is the rquired permission)
+(`mediaonly.read` is the required permission)
 
 ```css
 .mediaonly [list|l|?]

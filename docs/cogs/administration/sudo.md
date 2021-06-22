@@ -1,11 +1,11 @@
 # Sudo
-This cog contains the `sudo` command. This command is similiar to the sudo-command from Linux.
+This cog contains the `sudo` command. This command is similiar to the sudo command on Linux.
 
 To use that command your ID has to be in the sudoers file. 
-The `.sudo` command has the highest permission level and its bound to ID's and not roles permissions.
+The `.sudo` command has the highest permission level and it is bound to IDs and not role permissions.
 
 ## `sudo`
-The `.sudo` command can execute every command even without the role permission. 
+The `.sudo` command allows a user to execute any command even without having the necessary permissions by role.
 ```css
 .sudo <cmd>
 ```
@@ -17,13 +17,13 @@ This command kills the running bot instance.
 ```
 
 ## `reload`
-This command reloads the bot script.
+This command reloads the bot by refiring all startup functions.
 ```css
 .sudo reload
 ```
 
 ## `stop`
-This command stops the bot.
+This command stops the running bot instance.
 ```css
 .sudo stop
 ```

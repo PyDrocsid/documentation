@@ -1,9 +1,9 @@
 # Invite Whitelist
 
-This cog is for managing allowed discord invites.
+This cog provides commands to manage a whitelist for discord invites that may be sent in the chat and automatic deletion of invites not on the list.
 
 ## `list`
-This command returns a list of all allowed Discord servers.
+The `.list` command returns a list of all Discord servers on the whitelist.
 
 ```css
 .[invites|i] [list|l|?]
@@ -11,7 +11,7 @@ This command returns a list of all allowed Discord servers.
 
 
 ## `show`
-This command shows detailed information about a given server.
+The `.show` command shows detailed information about a given server on the whitelist.
 
 ```css
 .[invites|i] [show|info|s|i] <server>
@@ -19,11 +19,11 @@ This command shows detailed information about a given server.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|server|:heavy_check_mark:|The server's name or id|
+|server|:heavy_check_mark:|The server's name, id or invite|
 
 
 ## `add`
-This command adds a Discord server to the whitelist.
+The `.add` command adds a Discord server to the whitelist.
 
 ```css
 .[invites|i] [add|+|a] <invite> <applicant>
@@ -40,7 +40,7 @@ Required Permissions:
 
 
 ## `remove`
-This command removes a server from the list.
+The `.remove` command removes a server from the whitelist.
 
 ```css
 .[invites|i] [remove|r|del|d|-] <server>
@@ -48,7 +48,7 @@ This command removes a server from the list.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|server|:heavy_check_mark:|The server's name or id|
+|server|:heavy_check_mark:|The server's name, id or invite|
 
 Required Permissions:
 
@@ -56,7 +56,7 @@ Required Permissions:
 
 
 ## `update`
-This command allows the applicant and members who have the `invites.manage` permission to update the invite link of a server.
+The `.update` command allows the applicant and users with the `invites.manage` permission to update the invite link to a server on the whitelist.
 
 ```css
 .[invites|i] [update|u] <invite>
@@ -64,4 +64,4 @@ This command allows the applicant and members who have the `invites.manage` perm
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|invite|:heavy_check_mark:|The new invite link (should be permanent and with unlimited usages)|
+|invite|:heavy_check_mark:|The new invite link (should be permanent with unlimited usages)|

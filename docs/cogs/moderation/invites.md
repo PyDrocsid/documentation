@@ -2,21 +2,29 @@
 
 This cog is for managing allowed discord invites.
 
-# `invites`
+## `list`
+This command returns a list of all allowed Discord servers.
 
 ```css
-.[invites|i] <subcommand>
+.[invites|i] [list|l|?]
 ```
+
+
+## `show`
+This command shows detailed information about a given server.
+
+```css
+.[invites|i] [show|info|s|i] <server>
+```
+
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|subcommand|:heavy_check_mark:|A specification|
+|server|:heavy_check_mark:|The server's name or id|
 
-# *Subcommands:*
 
-## `.add`
-This subcommand adds an invite to the list.
-|**Permissions**|invites.manage|
-|:------:|:----------|
+## `add`
+This command adds a Discord server to the whitelist.
+
 ```css
 .[invites|i] [add|+|a] <invite> <applicant>
 ```
@@ -26,36 +34,30 @@ This subcommand adds an invite to the list.
 |invite|:heavy_check_mark:|The invite link (should be permanent with unlimited usages)|
 |applicant|:heavy_check_mark:|The user who wants to add the server to the list|
 
-## `list`
-This command returns a list of all allowed discord servers.
-```css
-.[invites|i] [list|l|?]
-```
+Required Permissions:
+
+- `invites.manage`
+
 
 ## `remove`
 This command removes a server from the list.
-|**Permissions**|invites.manage|
-|:------:|:----------|
+
 ```css
 .[invites|i] [remove|r|del|d|-] <server>
 ```
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|server|:heavy_check_mark:|The ID of the server|
+|server|:heavy_check_mark:|The server's name or id|
 
-## `show`
-This command shows detailed information about a server.
+Required Permissions:
 
-```css
-.[invites|i] [show|info|s|i] <server>
-```
-|Argument|Required|Description|
-|:------:|:------:|:----------|
-|server|:heavy_check_mark:|The ID/Name of the server|
+- `invites.manage`
+
 
 ## `update`
-This command updates an invite link from a server.
+This command allows the applicant and members who have the `invites.manage` permission to update the invite link of a server.
+
 ```css
 .[invites|i] [update|u] <invite>
 ```

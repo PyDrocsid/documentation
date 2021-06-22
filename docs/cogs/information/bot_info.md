@@ -10,7 +10,7 @@ The `.info` command shows information about the bot.
 .[info|infos|about]
 ```
 
-The information given by this command include:
+The information given by this command includes:
 
 - Bot name and description
 - Author

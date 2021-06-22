@@ -1,16 +1,25 @@
 # Help
-This cog provides diverse help commands.
+This cog provides the `.help` command, which can be used to get either a list of all available commands or detailed information about a specific command.
 
-### General Usage
-```
+```css
 .help [cog|command]
 ```
 
-## General Help
-You can use `.help` to get a list of all commands grouped by cogs.
+|Argument|Required|Description|
+|:------:|:------:|:----------|
+|`cog`| |The cog whose command list is requested|
+|`command`| |The bot command for which detailed information is requested|
 
-## Cogs
-To list all commands of any cog, run `.help <cog>`
+## Command List
+You can either use `.help` to get a list of all commands grouped by cogs or `.help <cog>` to list all commands of a given cog.
 
-## Specific Commands
-A detailed description is provided by executing `.help <command>`. All aliases and usages are shown here.
+## Detailed Information
+Detailed information about a given command is provided by executing `.help <command>`.
+
+The information given by this command includes:
+
+- Aliases
+- Parameters
+- Description
+- Subcommands
+- Required/Optional permissions

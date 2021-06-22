@@ -14,7 +14,7 @@ This cog is for managing allowed discord invites.
 # *Subcommands:*
 
 ## `.add`
-This subcommands adds an invite to the list.
+This subcommand adds an invite to the list.
 |**Permissions**|invites.manage|
 |:------:|:----------|
 ```css
@@ -33,7 +33,7 @@ This command returns a list of all allowed discord servers.
 ```
 
 ## `remove`
-This command remnoves a server from the list.
+This command removes a server from the list.
 |**Permissions**|invites.manage|
 |:------:|:----------|
 ```css
@@ -42,17 +42,17 @@ This command remnoves a server from the list.
 
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|server|:heavy_check_mark:|The ID from the server|
+|server|:heavy_check_mark:|The ID of the server|
 
 ## `show`
-This command show detailed information about a server.
+This command shows detailed information about a server.
 
 ```css
 .[invites|i] [show|info|s|i] <server>
 ```
 |Argument|Required|Description|
 |:------:|:------:|:----------|
-|server|:heavy_check_mark:|The ID/Name from the server|
+|server|:heavy_check_mark:|The ID/Name of the server|
 
 ## `update`
 This command updates an invite link from a server.

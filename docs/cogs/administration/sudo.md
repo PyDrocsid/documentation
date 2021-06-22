@@ -1,7 +1,6 @@
 # Sudo
 This cog contains the `.sudo` command, as well as some other commands used to maintain the bot instance. This `.sudo` command is similar to the `sudo` command on Linux.
 
-
 ## `sudo`
 The `.sudo` command allows a specific user to execute any command even without having the necessary permission level by temporarily granting the user the highest permission level (`owner`).
 

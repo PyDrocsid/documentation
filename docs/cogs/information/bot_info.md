@@ -6,6 +6,7 @@ This cog contains information about the bot and its tasks.
 
 ### `info`
 The `.info` command shows information about the bot.
+
 ```css
 .[info|infos|about]
 ```
@@ -26,6 +27,7 @@ The information given by this command includes:
 
 ### `version`
 The `.version` command returns the bot's current version.
+
 ```css
 .[version|v]
 ```
@@ -41,6 +43,7 @@ The `.github` command returns information about the bot's GitHub repository.
 
 ### `contributors`
 The `.contributors` command returns a list of all people that contributed to the bot.
+
 ```css
 .[contributors|contri|con]
 ```
@@ -48,6 +51,7 @@ The `.contributors` command returns a list of all people that contributed to the
 
 ### `cogs`
 The `.cogs` command returns a list of all cogs currently in use.
+
 ```css
 .cogs
 ```

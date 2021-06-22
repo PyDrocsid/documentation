@@ -1,47 +1,57 @@
 # Bot Info
 
-The bot_info-cog contains information about the bot and his tasks.
+This cog contains information about the bot and its tasks.
 
-## `github`
-The `.github` command returns the link from the [PyDrocsid page](https://github.com/PyDrocsid/).
+## Commands
 
+### `info`
+The `.info` command shows information about the bot.
 ```css
-.[github|gh]
+.[info|infos|about]
 ```
 
-## `version`
+The information given by this command include:
+
+- Bot name and description
+- Author
+- Contributors
+- Version
+- Number of enabled cogs
+- Github repository
+- [Discord](https://discord.pydrocsid.ml/) and [GitHub](https://github.com/PyDrocsid) links of the PyDrocsid framework
+- Prefix
+- Help command
+- Where to submit bug reports and feature requests
+
+
+### `version`
 The `.version` command returns the current version of the bot.
 ```css
 .[version|v]
 ```
 
-## `info`
-The `.info` command returns an information embed about the bot.
+
+### `github`
+The `.github` command returns information about the GitHub repository of the bot.
+
 ```css
-.[info|infos|about]
+.[github|gh]
 ```
 
-## `admininfo`
-The `.admininfo` command returns more detailed information about the bot. (Requires `bot_info.admininfo`-permissions)
-```css
-.[admininfo|admininfos]
-```
 
-## `contributors`
+### `contributors`
 The `.contributors` command returns a list of all people that contributed to the bot.
 ```css
 .[contributors|contri|con]
 ```
 
-## `cogs`
-The `cogs` command returns a list of the currently used cogs.
+
+### `cogs`
+The `cogs` command returns a list of all cogs currently in use.
 ```css
 .cogs
 ```
 
-# status_task
-The status message can be changed in the `en.yml` file.
 
-Path:
-
-[PyDrocsid/cogs/information/bot_info/translations/en.yml](https://docs.pydrocsid.ml/library/translations/)
+## Status Message
+The bot displays a status message that is updated every 20 seconds. The list of status strings is defined under the `profile_status` [translation key](https://docs.pydrocsid.ml/library/translations/).

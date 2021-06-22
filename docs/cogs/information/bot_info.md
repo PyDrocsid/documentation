@@ -10,13 +10,13 @@ The `.github` command returns the link from the [PyDrocsid page](https://github.
 ```
 
 ## `version`
-The `.version` command returns the current bot version.
+The `.version` command returns the current version of the bot.
 ```css
 .[version|v]
 ```
 
 ## `info`
-The `.info` command returns a information embed about the bot.
+The `.info` command returns an information embed about the bot.
 ```css
 .[info|infos|about]
 ```
@@ -28,19 +28,19 @@ The `.admininfo` command returns more detailed information about the bot. (Requi
 ```
 
 ## `contributors`
-The `.contributors` command returns a list of all people who have programmed the bot.
+The `.contributors` command returns a list of all people that contributed to the bot.
 ```css
 .[contributors|contri|con]
 ```
 
 ## `cogs`
-The `cogs` command returns a list of the current active cogs.
+The `cogs` command returns a list of the currently used cogs.
 ```css
 .cogs
 ```
 
 # status_task
-The status message can be changed in the `en.yml` file
+The status message can be changed in the `en.yml` file.
 
 Path:
 

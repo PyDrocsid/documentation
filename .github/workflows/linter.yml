@@ -1,0 +1,16 @@
+name: Linter
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
+
+      - uses: docker://avtodev/markdown-lint:v1
+        with:
+          config: .linter.yml
+          args: docs

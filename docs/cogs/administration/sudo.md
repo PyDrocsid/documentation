@@ -1,5 +1,5 @@
 # Sudo
-This cog contains the `.sudo` command, as well as some other commands used to maintain the bot instance. This `.sudo` command is similiar to the `sudo` command on Linux.
+This cog contains the `.sudo` command, as well as some other commands used to maintain the bot instance. This `.sudo` command is similar to the `sudo` command on Linux.
 
 
 ## `sudo`
@@ -18,7 +18,7 @@ To use this command your user ID has to match the value of the `OWNER_ID` enviro
 ## Maintenance Commands
 
 !!! Note
-    These commands do not necessarily have to be executed with the `.sudo` command. Theoretically, the required permission levels can be changed to any other permission level, so that users who are not allowed to execute the sudo command can also use these maintenance commands. However, it is recommended to only allow trusted users to use these commands.
+    These commands do not necessarily have to be executed with the `.sudo` command. Theoretically, the required permission levels can be changed to any other permission level, so that users who are not allowed to execute the `.sudo` command can also use these maintenance commands. However, it is recommended to only allow trusted users to use these commands.
 
 ### `clear_cache`
 This command clears the redis cache by executing the `FLUSHALL` command.

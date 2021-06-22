@@ -1,4 +1,5 @@
 # Sudo
+
 This cog contains the `.sudo` command, as well as some other commands used to maintain the bot instance. This `.sudo` command is similar to the `sudo` command on Linux.
 
 ## `sudo`
@@ -46,6 +47,7 @@ This command stops the running bot instance gracefully.
 
 ### `kill`
 This command kills the running bot instance.
+
 ```css
 .kill
 ```

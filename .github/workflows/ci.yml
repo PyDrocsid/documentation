@@ -1,21 +1,33 @@
-name: Deploy Docs
+name: CI
 
 on:
-  push:
-    branches: [ develop ]
+  - push
+  - pull_request
+
+env:
+  PYTHON_VERSION: 3.9
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
         with:
+          submodules: recursive
           fetch-depth: 0
 
-      - uses: actions/setup-python@v2.2.2
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v2.2.2
         with:
-          python-version: 3.x
+          python-version: ${{ env.PYTHON_VERSION }}
 
-      - run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-git-revision-date-localized-plugin
+      - name: Install dependencies
+        run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-git-revision-date-localized-plugin
 
-      - run: mkdocs gh-deploy --force
+      - name: Build
+        run: python build.py && mkdocs build
+
+      - name: Deploy
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
+        run: mkdocs gh-deploy --force

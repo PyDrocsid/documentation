@@ -46,7 +46,8 @@ for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES)
 
         target = Path(f"cogs/{category.name}/{cog.name}.md")
         Path("docs").joinpath(target).parent.mkdir(parents=True, exist_ok=True)
-        Path("docs").joinpath(target).symlink_to(docs)
+        # Path("docs").joinpath(target).symlink_to(docs)
+        docs.link_to(Path("docs").joinpath(target))
         category_nav.append({name: str(target)})
 
 with open("mkdocs.yml", "w") as file:

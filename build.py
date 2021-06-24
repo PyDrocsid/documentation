@@ -23,6 +23,15 @@ else:
     print("::error::Could not find cogs in mkdocs navigation!")
     exit(1)
 
+docs = Path(__file__).parent.joinpath("cogs/pubsub.md")
+if not docs.is_file():
+    print(f"::error::Could not find pubsub documentation")
+    exit(1)
+
+target = Path("pubsub.md")
+# Path("docs").joinpath(target).symlink_to(docs)
+docs.link_to(Path("docs").joinpath(target))
+
 cog_nav.clear()
 
 for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES):

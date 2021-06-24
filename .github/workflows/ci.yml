@@ -8,8 +8,26 @@ env:
   PYTHON_VERSION: 3.9
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Lint docs
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+          config: .linter.yml
+          args: .
+
   build:
     runs-on: ubuntu-latest
+    needs: [ lint ]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4

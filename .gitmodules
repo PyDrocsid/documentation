@@ -1,4 +1,4 @@
 [submodule "cogs"]
     path = cogs
-    url = ../../Pydrocsid/cogs.git
+    url = ../../PyDrocsid/cogs.git
     branch = develop

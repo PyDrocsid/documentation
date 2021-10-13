@@ -11,7 +11,7 @@ This cog contains some commands to do something.
 
 ## `some_command`
 
-This command contains subcommands to do something. / This command is used to do something. (depends on wether there are subcommands or not) <br>
+This command contains subcommands to do something. / This command is used to do something. (depends on whether there are subcommands or not) <br>
 If no subcommand is given, something else will be done. (only if there are subcommands and the default behavior is not the help message)
 
 ```css
@@ -23,12 +23,12 @@ Required Permissions: (only needed if the command is not publicly available)
 - `templatecog.perm1`
 
 !!! note
-    Some note for additional information on `some_subcommand`.
+    Some note for additional information on `some_command`.
 
 
 ### `some_subcommand`
 
-This subcommand contains subcommands to do something. / This subcommand is used to to something. (depends on wether there are subcommands or not.) <br>
+This subcommand contains subcommands to do something. / This subcommand is used to to something. (depends on whether there are subcommands or not.) <br>
 If no subcommand is given, something else will be done. (only if there are subcommands and the default behavior is not the help message)
 
 ```css

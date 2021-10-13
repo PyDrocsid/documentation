@@ -1,14 +1,12 @@
-Markdown Template
-=================
-
-The following is a template for all PyDrocsid documentation. <br>
+<!--
+The following is a template for all PyDrocsid documentation.
 Exact phrasing and punctuation is part of the documentation. Everything in parentheses are comments for further explanations and should not be in the final documentation.
+-->
 
---------------------------
 
-# SomeCog
+# TemplateCog
 
-This cog contains some command to do something.
+This cog contains some commands to do something.
 
 
 ## `some_command`
@@ -22,7 +20,7 @@ If no subcommand is given, something else will be done. (only if there are subco
 
 Required Permissions: (only needed if the command is not publicly available)
 
-- `somecog.perm1`
+- `templatecog.perm1`
 
 !!! note
     Some note for additional information on `some_subcommand`.
@@ -46,8 +44,8 @@ Arguments:
 
 Required Permissions:
 
-- `somecog.perm1`
-- `somecog.perm2`
+- `templatecog.perm1`
+- `templatecog.perm2`
 
 !!! note
     Some note for additional information on `some_subcommand`.

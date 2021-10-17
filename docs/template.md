@@ -4,14 +4,14 @@ Exact phrasing and punctuation is part of the documentation. Everything in paren
 -->
 
 
-# TemplateCog
+# Template
 
-This cog contains some commands to do something.
+Contains some commands to do something.
 
 
 ## `some_command`
 
-This command contains subcommands to do something. / This command is used to do something. (depends on whether there are subcommands or not) <br>
+Contains subcommands to do something. / Does something. (depends on whether there are subcommands or not) <br>
 If no subcommand is given, something else will be done. (only if there are subcommands and the default behavior is not the help message)
 
 ```css
@@ -28,7 +28,7 @@ Required Permissions: (only needed if the command is not publicly available)
 
 ### `some_subcommand`
 
-This subcommand contains subcommands to do something. / This subcommand is used to to something. (depends on whether there are subcommands or not.) <br>
+Contains subcommands to do something. / Does something. (depends on whether there are subcommands or not.) <br>
 If no subcommand is given, something else will be done. (only if there are subcommands and the default behavior is not the help message)
 
 ```css
@@ -37,10 +37,10 @@ If no subcommand is given, something else will be done. (only if there are subco
 
 Arguments:
 
-|Argument|Required|Description|
-|:------:|:------:|:----------|
-|`some_arg1`|:heavy_check_mark:|Description for `some_arg1`|
-|`some_arg2`||Description for `some_arg2`|
+|  Argument   |      Required      | Description                 |
+|:-----------:|:------------------:|:----------------------------|
+| `some_arg1` | :heavy_check_mark: | Description for `some_arg1` |
+| `some_arg2` |                    | Description for `some_arg2` |
 
 Required Permissions:
 

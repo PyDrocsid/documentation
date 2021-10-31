@@ -1,5 +1,5 @@
 site_name: PyDrocsid Documentation
-site_url: https://docs.pydrocsid.ml/
+site_url: https://pydrocsid.defelo.de/
 repo_name: PyDrocsid/documentation
 repo_url: https://github.com/PyDrocsid/documentation/
 site_description: "Documentation for the PyDrocsid Framework"
@@ -42,7 +42,6 @@ markdown_extensions:
 
 plugins:
   - git-revision-date
-  - git-revision-date-localized
   - search:
       lang: en
 

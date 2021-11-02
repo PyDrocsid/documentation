@@ -24,28 +24,28 @@ jobs:
           config: .linter.yml
           args: .
 
-  build:
-    runs-on: ubuntu-latest
-    needs: [ lint ]
+# build:
+#   runs-on: ubuntu-latest
+#   needs: [ lint ]
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.4
-        with:
-          submodules: recursive
-          fetch-depth: 0
+#   steps:
+#     - name: Checkout
+#       uses: actions/checkout@v2.3.4
+#       with:
+#         submodules: recursive
+#         fetch-depth: 0
 
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v2.2.2
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
+#     - name: Set up Python ${{ env.PYTHON_VERSION }}
+#       uses: actions/setup-python@v2.2.2
+#       with:
+#         python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Install dependencies
-        run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-git-revision-date-localized-plugin
+#     - name: Install dependencies
+#       run: pip install mkdocs-material mkdocs-git-revision-date-plugin mkdocs-git-revision-date-localized-plugin
 
-      - name: Build
-        run: python build.py && mkdocs build
+#     - name: Build
+#       run: python build.py && mkdocs build
 
-      - name: Deploy
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
-        run: mkdocs gh-deploy --force
+#     - name: Deploy
+#       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
+#       run: mkdocs gh-deploy --force

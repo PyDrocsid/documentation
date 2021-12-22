@@ -39,7 +39,7 @@ Arguments: (only needed if there are arguments)
 
 | Argument    | Required           | Description                 |
 |:-----------:|:------------------:|:----------------------------|
-| `some_arg1` | :heavy_check_mark: | Description for `some_arg1` |
+| `some_arg1` | :fontawesome-solid-check: | Description for `some_arg1` |
 | `some_arg2` |                    | Description for `some_arg2` |
 (column width matches longest string in column + 1 space padding per side, all text in columns is left aligned)
 

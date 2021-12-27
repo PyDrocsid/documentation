@@ -37,10 +37,10 @@ If no subcommand is given, something else will be done. (only if there are subco
 
 Arguments: (only needed if there are arguments)
 
-| Argument    | Required           | Description                 |
-|:-----------:|:------------------:|:----------------------------|
+| Argument    | Required                  | Description                 |
+|:-----------:|:-------------------------:|:----------------------------|
 | `some_arg1` | :fontawesome-solid-check: | Description for `some_arg1` |
-| `some_arg2` |                    | Description for `some_arg2` |
+| `some_arg2` |                           | Description for `some_arg2` |
 (column width matches longest string in column + 1 space padding per side, all text in columns is left aligned)
 
 Required Permissions: (only needed if the command is not publicly available)

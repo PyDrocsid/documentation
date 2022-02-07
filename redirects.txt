@@ -1,1 +1,2 @@
 /discord https://discord.defelo.de/
+/matrix https://matrix.to/#/#pydrocsid:matrix.defelo.de

@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: merge-me
     steps:
-      - if: ${{ github.event.workflow_run.conclusion == 'success' }}
+      - if: ${{ github.event_name == 'check_suite' || github.event.workflow_run.conclusion == 'success' }}
         name: Merge me!
         uses: ridedott/merge-me-action@v2
         with:

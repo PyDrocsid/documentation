@@ -6,6 +6,9 @@ on:
       - completed
     workflows:
       - CI
+  check_suite:
+    types:
+      - completed
 
 jobs:
   merge-me:

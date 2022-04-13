@@ -2,3 +2,6 @@
     path = cogs
     url = ../../PyDrocsid/cogs.git
     branch = develop
+[submodule "library"]
+	path = library
+	url = ../../PyDrocsid/library.git

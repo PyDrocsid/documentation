@@ -4,7 +4,6 @@ repo_name: PyDrocsid/documentation
 repo_url: https://github.com/PyDrocsid/documentation/
 site_description: "Documentation for the PyDrocsid Framework"
 site_author: https://github.com/PyDrocsid
-remote_branch: gh-pages
 edit_uri: https://github.com/PyDrocsid/documentation/edit/develop/docs/
 
 theme:
@@ -40,7 +39,9 @@ theme:
     - search.highlight
     - navigation.expand
     - navigation.instant
-    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
 
 markdown_extensions:
   - toc:
@@ -64,25 +65,22 @@ plugins:
         - build.py
   - literate-nav:
       nav_file: SUMMARY.md
+  - section-index
+  - mkdocstrings:
+      enable_inventory: true
+      handlers:
+        python:
+          selection:
+            docstring_style: sphinx
+          rendering:
+            show_submodules: false
+            show_root_heading: true
+            heading_level: 1
+            docstring_section_style: list
+          import:
+            - https://docs.pycord.dev/en/master/objects.inv
+            - https://docs.sqlalchemy.org/en/14/objects.inv
 
 nav:
-  - 'Index': index.md
-
-  - 'Library':
-    - 'Cogs': library/cogs.md
-    - 'Config': library/config.md
-    - 'Database': library/database.md
-    - 'Emojis': library/emojis.md
-    - 'Environment Variables': library/environment.md
-    - 'Logger': library/logger.md
-    - 'Material Colors': library/material_colors.md
-    - 'Permissions': library/permissions.md
-    - 'PubSub': library/pubsub.md
-    - 'Settings': library/settings.md
-    - 'Translations': library/translations.md
-    - 'Util Functions': library/util.md
-
+  - 'Library': library/
   - 'Cogs': cogs/
-
-  - 'PubSub Channels': pubsub.md
-

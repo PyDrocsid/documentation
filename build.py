@@ -2,41 +2,69 @@
 
 from pathlib import Path
 import mkdocs_gen_files
+import sys
 import re
 
-CATEGORIES = [
-    "administration",
-    "moderation",
-    "information",
-    "integrations",
-    "general",
-]
+CATEGORIES = sorted(f.name for f in Path("cogs").iterdir() if f.is_dir() and not f.name.startswith("."))
 
-with mkdocs_gen_files.open("cogs/SUMMARY.md", "w") as summary:
-    for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES):
-        if not category.is_dir():
-            print(f"::warning::Could not find category {category.name}")
+nav = mkdocs_gen_files.Nav()
+
+for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES):
+    if not category.is_dir():
+        print(f"::warning::Could not find category {category.name}")
+        continue
+
+    #print(f"- {category.name.capitalize()}", file=summary)
+
+    for cog in sorted(category.iterdir()):
+        if not cog.is_dir():
             continue
 
-        print(f"- {category.name.capitalize()}", file=summary)
+        docs = cog.joinpath("documentation.md")
+        if not docs.is_file():
+            print(f"::warning::Could not find documentation for {category.name}/{cog.name}")
+            continue
 
-        for cog in sorted(category.iterdir()):
-            if not cog.is_dir():
-                continue
+        path = f"cogs/{category.name}/{cog.name}.md"
+        with docs.open() as src, mkdocs_gen_files.open(path, "w") as dst:
+            content = src.read()
+            dst.write(content)
+            name = re.match(r"^#? *(.*)$", content.splitlines()[0])[1].strip()
 
-            docs = cog.joinpath("documentation.md")
-            if not docs.is_file():
-                print(f"::warning::Could not find documentation for {category.name}/{cog.name}")
-                continue
+        #print(f"    - [{name}]({category.name}/{cog.name}.md)", file=summary)
+        nav[(category.name.capitalize(), name)] = f"{category.name}/{cog.name}.md"
+        mkdocs_gen_files.set_edit_path(path, f"https://github.com/PyDrocsid/cogs/edit/develop/{category.name}/{cog.name}/documentation.md")
 
-            path = f"cogs/{category.name}/{cog.name}.md"
-            with docs.open() as src, mkdocs_gen_files.open(path, "w") as dst:
-                content = src.read()
-                dst.write(content)
-                name = re.match(r"^#? *(.*)$", content.splitlines()[0])[1].strip()
+with open("cogs/pubsub.md") as src, mkdocs_gen_files.open("pubsub.md", "w") as dst:
+    dst.write(src.read())
 
-            print(f"    - [{name}]({category.name}/{cog.name}.md)", file=summary)
-            mkdocs_gen_files.set_edit_path(path, f"https://github.com/PyDrocsid/cogs/edit/develop/{category.name}/{cog.name}/documentation.md")
+with mkdocs_gen_files.open("cogs/SUMMARY.md", "w") as nav_file:
+    nav_file.writelines(nav.build_literate_nav())
 
-    with open("cogs/pubsub.md") as src, mkdocs_gen_files.open("pubsub.md", "w") as dst:
-        dst.write(src.read())
+nav = mkdocs_gen_files.Nav()
+for path in sorted(Path("library/PyDrocsid").rglob("*.py")):
+    module_path = path.relative_to("library").with_suffix("")
+    doc_path = path.relative_to("library").with_suffix(".md")
+    full_doc_path = Path("library", doc_path)
+
+    parts = list(module_path.parts)
+
+    if parts[-1] == "__init__":
+        parts = parts[:-1]
+        doc_path = doc_path.with_name("index.md")
+        full_doc_path = full_doc_path.with_name("index.md")
+    elif parts[-1] == "__main__":
+        continue
+
+    nav[parts] = doc_path.as_posix()
+
+    with mkdocs_gen_files.open(full_doc_path, "w") as fd:
+        identifier = ".".join(parts)
+        print(f"::: {identifier}", file=fd)
+
+    mkdocs_gen_files.set_edit_path(full_doc_path, path)
+
+with mkdocs_gen_files.open("library/SUMMARY.md", "w") as nav_file:
+    nav_file.writelines(nav.build_literate_nav())
+
+sys.path.insert(0, "library")

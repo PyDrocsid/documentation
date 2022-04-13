@@ -29,12 +29,14 @@ with mkdocs_gen_files.open("cogs/SUMMARY.md", "w") as summary:
                 print(f"::warning::Could not find documentation for {category.name}/{cog.name}")
                 continue
 
-            with docs.open() as src, mkdocs_gen_files.open(f"cogs/{category.name}/{cog.name}.md", "w") as dst:
+            path = f"cogs/{category.name}/{cog.name}.md"
+            with docs.open() as src, mkdocs_gen_files.open(path, "w") as dst:
                 content = src.read()
                 dst.write(content)
                 name = re.match(r"^#? *(.*)$", content.splitlines()[0])[1].strip()
 
             print(f"    - [{name}]({category.name}/{cog.name}.md)", file=summary)
+            mkdocs_gen_files.set_edit_path(path, f"https://github.com/PyDrocsid/cogs/edit/develop/{category.name}/{cog.name}/documentation.md")
 
     with open("cogs/pubsub.md") as src, mkdocs_gen_files.open("pubsub.md", "w") as dst:
         dst.write(src.read())

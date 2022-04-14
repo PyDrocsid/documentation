@@ -76,6 +76,8 @@ plugins:
             show_root_heading: true
             heading_level: 1
             docstring_section_style: list
+            separate_signature: true
+            show_signature_annotations: true
           import:
             - https://docs.pycord.dev/en/master/objects.inv
             - https://docs.sqlalchemy.org/en/14/objects.inv

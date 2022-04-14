@@ -14,8 +14,6 @@ for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES)
         print(f"::warning::Could not find category {category.name}")
         continue
 
-    #print(f"- {category.name.capitalize()}", file=summary)
-
     for cog in sorted(category.iterdir()):
         if not cog.is_dir():
             continue
@@ -31,11 +29,12 @@ for category in map(Path(__file__).parent.joinpath("cogs").joinpath, CATEGORIES)
             dst.write(content)
             name = re.match(r"^#? *(.*)$", content.splitlines()[0])[1].strip()
 
-        #print(f"    - [{name}]({category.name}/{cog.name}.md)", file=summary)
         nav[(category.name.capitalize(), name)] = f"{category.name}/{cog.name}.md"
         mkdocs_gen_files.set_edit_path(path, f"https://github.com/PyDrocsid/cogs/edit/develop/{category.name}/{cog.name}/documentation.md")
 
-with open("cogs/pubsub.md") as src, mkdocs_gen_files.open("pubsub.md", "w") as dst:
+nav[("PubSub Channels",)] = "pubsub.md"
+
+with open("cogs/pubsub.md") as src, mkdocs_gen_files.open("cogs/pubsub.md", "w") as dst:
     dst.write(src.read())
 
 with mkdocs_gen_files.open("cogs/SUMMARY.md", "w") as nav_file:

@@ -1,3 +1,4 @@
 * @Defelo
 *.md @PyDrocsid/text-reviewer
 /cogs @Defelo @PyDrocsidBot
+/library @Defelo @PyDrocsidBot

@@ -85,3 +85,6 @@ nav:
   - 'PyDrocsid': index.md
   - 'Library': library/
   - 'Cogs': cogs/
+  - 'GitHub': https://github.com/PyDrocsid
+  - 'Discord': https://pydrocsid.defelo.de/discord
+  - 'Matrix': https://pydrocsid.defelo.de/matrix

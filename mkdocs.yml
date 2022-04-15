@@ -67,6 +67,11 @@ plugins:
   - section-index
   - mkdocstrings:
       enable_inventory: true
+      watch:
+        - docs
+        - build.py
+        - cogs
+        - library
       handlers:
         python:
           selection:

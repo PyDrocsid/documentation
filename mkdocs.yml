@@ -45,16 +45,28 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.details
   - pymdownx.highlight
   - pymdownx.superfences
   - admonition
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
+
+extra_css:
+  - css/material.css
+  - css/code_select.css
+
+extra:
+  generator: false
 
 plugins:
   - search:
@@ -75,14 +87,16 @@ plugins:
       handlers:
         python:
           selection:
-            docstring_style: sphinx
+            docstring_style: google
           rendering:
             show_submodules: false
             show_root_heading: true
             heading_level: 1
-            docstring_section_style: list
+            merge_init_into_class: true
+            docstring_section_style: table
             separate_signature: true
             show_signature_annotations: true
+            show_source: true
           import:
             - https://docs.python.org/3/objects.inv
             - https://docs.pycord.dev/en/master/objects.inv

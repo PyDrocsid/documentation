@@ -19,6 +19,8 @@ open() {
     xdg-open http://localhost:8000/
 }
 
+export PYTHONPATH=library
+
 tmux new -s docs -d mkdocs serve
 open &
 tmux a -t docs

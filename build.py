@@ -5,6 +5,8 @@ import mkdocs_gen_files
 import sys
 import re
 
+sys.path.insert(0, "library")
+
 CATEGORIES = sorted(f.name for f in Path("cogs").iterdir() if f.is_dir() and not f.name.startswith("."))
 
 nav = mkdocs_gen_files.Nav()
